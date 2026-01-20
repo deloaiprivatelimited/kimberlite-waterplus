@@ -28,13 +28,13 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h3 className="text-sm font-semibold text-gray-200 tracking-wider uppercase mb-4">
-              Navigation
+              Important Links
             </h3>
             <ul className="space-y-3">
-              {['Solutions', 'Industries', 'Partners', 'Sustainability'].map((item) => (
+              {['About Us', 'Terms & Conditions', 'Privacy Policy', 'Products'].map((item) => (
                 <li key={item}>
                   <a 
-                    href={`#${item.toLowerCase()}`} 
+                    href={`${item.toLowerCase()}`} 
                     className="text-base text-gray-400 hover:text-[#0c71c3] transition-colors"
                   >
                     {item}

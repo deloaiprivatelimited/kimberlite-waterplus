@@ -202,7 +202,7 @@ const Chemicals = () => {
               
               {/* Diagram Placeholder */}
               <div className="my-8 bg-white p-4 border border-gray-100 rounded-lg shadow-sm flex flex-col items-center justify-center min-h-[200px] text-gray-400">
-                 
+                <img src={content.heroImage} alt={content.title} className="h-120 min-w-full object-cover" />
                  <p className="text-xs mt-4 uppercase tracking-widest">{content.caption}</p>
               </div>
             </div>
@@ -257,44 +257,7 @@ const Chemicals = () => {
         </div>
       </div>
 
-      {/* 4. CROSS-LINKING (Other Solutions) */}
-      <div className="bg-gray-50 py-20 border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-serif font-bold text-gray-900 mb-10 text-center">See Also</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {Object.keys(chemicalsData)
-              .filter(key => key !== activeTab)
-              .slice(0, 3)
-              .map((key, i) => (
-                <div 
-                  key={i} 
-                  onClick={() => {
-                    setActiveTab(key);
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }} 
-                  className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-gray-100"
-                >
-                  <div className="h-40 overflow-hidden relative">
-                    <img 
-                      src={chemicalsData[key].heroImage} 
-                      alt={chemicalsData[key].title} 
-                      className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
-                  </div>
-                  <div className="p-6 flex justify-between items-center">
-                    <h3 className="text-md font-bold text-gray-900 group-hover:text-[#0c71c3] transition-colors">
-                      {chemicalsData[key].title}
-                    </h3>
-                    <div className="text-gray-400 group-hover:text-[#0c71c3] transition-colors">
-                      <ArrowRightIcon />
-                    </div>
-                  </div>
-                </div>
-            ))}
-          </div>
-        </div>
-      </div>
+
 
     </div>
   );

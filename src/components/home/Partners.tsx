@@ -1,57 +1,66 @@
 import React from 'react';
 
-const Partners = () => {
-  const partners = [
-    { name: 'BRAND', suffix: 'ONE', subtext: 'Industrial Leader' },
-    { name: 'SUGAR', suffix: 'CORP', subtext: 'Sector Authority' },
-    { name: 'PETRO', suffix: 'TECH', subtext: 'Global Partner' },
-    { name: 'PHARMA', suffix: 'PLUS', subtext: 'Quality Focused' },
-    { name: 'INFRA', suffix: 'GO', subtext: 'Urban Development' }
+const GroupCompanies = () => {
+  const companies = [
+    { 
+      name: 'Kimberlite Chemicals', 
+      src: 'https://www.kimberlitewaterplus.com/wp-content/uploads/KCIPL-LOGO-About-us.png' 
+    },
+    { 
+      name: 'World of Chemicals', 
+      src: 'https://www.kimberlitewaterplus.com/wp-content/uploads/WOC-LOGO-About-us.png' 
+    },
+    { 
+      name: 'Kimberlite Water Plus', 
+      src: 'https://www.kimberlitewaterplus.com/wp-content/uploads/LOGO-About-us.png' 
+    },
+    { 
+      name: 'Kimberlite Softwares', 
+      src: 'https://www.kimberlitewaterplus.com/wp-content/uploads/KSPL-LOGO-About-us.png' 
+    }
   ];
 
   return (
-    <div id="partners" className="py-20 bg-gray-50 border-y border-gray-200">
+    <div id="group-companies" className="py-20 bg-gray-50 border-y border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4 font-serif">
-            Trusted by Leading Brands
+        <div className="text-center mb-12">
+          <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-2">
+            Our Ecosystem
+          </h3>
+          <h2 className="text-3xl font-bold text-gray-900 font-serif">
+            Group Companies
           </h2>
-          <div className="w-20 h-1 bg-[#0c71c3] mx-auto mb-6"></div>
-          <p className="max-w-2xl mx-auto text-gray-600">
-            Our products and solutions are the choice of industry leaders across the industrial, commercial, and infrastructure sectors. These long-term partnerships are built on quality, innovation, and customer-focused service.
-          </p>
+          <div className="w-16 h-1 bg-[#0c71c3] mx-auto mt-4 mb-6"></div>
         </div>
 
         {/* Logo Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center">
-          {partners.map((partner, index) => (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 items-center justify-items-center">
+          {companies.map((company, index) => (
             <div 
-              key={index}
-              className="group flex justify-center p-8 bg-white rounded-lg shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-md hover:scale-105 cursor-default"
+              key={index} 
+              className="group w-full flex justify-center items-center transition-all duration-300"
             >
-              <div className="text-center opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300">
-                <div className="font-bold text-gray-400 text-xl tracking-tighter group-hover:text-gray-900">
-                  {partner.name}<span className="text-[#0c71c3]">{partner.suffix}</span>
-                </div>
-                <div className="text-[10px] uppercase text-gray-400 tracking-widest mt-1 group-hover:text-[#0c71c3]">
-                  {partner.subtext}
-                </div>
-              </div>
+              <img 
+                src={company.src} 
+                alt={company.name} 
+                className="max-h-20 object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 cursor-pointer" 
+              />
             </div>
           ))}
         </div>
         
-        {/* Footer Note */}
-        <div className="mt-12 text-center">
-          <p className="text-sm text-gray-500 font-medium">
-            Over 500+ successful installations across industrial complexes.
+        {/* Optional Footer Line */}
+        <div className="mt-16 border-t border-gray-200 pt-8 text-center">
+          <p className="text-sm text-gray-500">
+            Synergizing expertise across chemicals, water solutions, and technology.
           </p>
         </div>
+
       </div>
     </div>
   );
 };
 
-export default Partners;
+export default GroupCompanies;

@@ -34,16 +34,6 @@ const Industries = () => {
 
           {/* Right Column: Search & Grid */}
           <div className="lg:col-span-2">
-            {/* Search Input */}
-            <div className="mb-6">
-              <input 
-                type="text" 
-                placeholder="Search expertise..." 
-                className="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0c71c3] focus:border-transparent transition-shadow"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-            </div>
 
             {/* Grid Display */}
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 h-64 overflow-y-auto pr-2 custom-scrollbar">

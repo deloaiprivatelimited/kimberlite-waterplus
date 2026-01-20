@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -17,12 +18,14 @@ const Navbar = () => {
           
           {/* Logo Section */}
           <div className="flex-shrink-0 flex items-center cursor-pointer" onClick={() => window.scrollTo(0,0)}>
+            <a href="/">
             <span className="font-serif text-2xl font-bold text-gray-900 tracking-tight">
               Kimberlite
             </span>
             <span className="ml-1 text-xs uppercase tracking-widest text-[#0c71c3] font-bold mt-1">
               Water Plus
             </span>
+            </a>
           </div>
 
           {/* Desktop Menu */}
@@ -36,9 +39,11 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <button className="bg-[#0c71c3] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#095593] transition-colors duration-200 shadow-sm">
-              Contact Us
-            </button>
+            <Link to="/contact">
+              <button className="bg-[#0c71c3] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#095593] transition-colors duration-200 shadow-sm">
+                Contact Us
+              </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -81,9 +86,11 @@ const Navbar = () => {
               </a>
             ))}
             <div className="pl-3 pr-4 py-2">
-              <button className="w-full text-left bg-[#0c71c3] text-white px-4 py-2 rounded-md text-base font-medium hover:bg-[#095593]">
-                Contact Us
-              </button>
+              <Link to="/contact">
+                <button className="w-full text-left bg-[#0c71c3] text-white px-4 py-2 rounded-md text-base font-medium hover:bg-[#095593]">
+                  Contact Us
+                </button>
+              </Link>
             </div>
           </div>
         </div>
